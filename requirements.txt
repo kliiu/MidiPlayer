@@ -1,0 +1,3 @@
+pygame
+music21
+pretty-midi
