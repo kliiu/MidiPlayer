@@ -13,5 +13,4 @@ The code is based on *刘洋成学长* Liu Yangcheng's work.)
 
 ## What it looks like
 
-![image-20211003171245986](C:\Users\k\AppData\Roaming\Typora\typora-user-images\image-20211003171245986.png)
-
+![Image txt]https://github.com/kliiu/MidiPlayer/blob/main/img/image-20211003171245986.png
