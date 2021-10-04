@@ -245,8 +245,14 @@ class FrameApp(Frame):
                 _, tempo = pm.get_tempo_changes()#第一个参数没用，只要第二个参数
                 return tempo.tolist()
         for midi in midi_path:#对每个midi文件进行处理
-            name_1 = midi.split('\\')[-1]
-            name_2 = name_1.split('.')[0]
+            name_1 = midi.split('\\')[-1]#若源文件的名字中含有 . 则进行特殊处理
+            if(len(name_1.split('.'))>1):
+                name_2 = []
+                for part in name_1.split('.'):
+                    name_2.append(part)
+                name_2=''.join(name_2)
+            else:
+                name_2=name_1.split('.')[0]
             # 设置保存的文件名
             transposed_path = os.path.join(transpose_root_dir + '/' + name_2 + 'to_'+str(speed)+'.mid')
             i=i+1
